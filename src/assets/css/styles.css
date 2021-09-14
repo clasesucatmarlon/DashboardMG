@@ -1,0 +1,63 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;300;400;700;900&display=swap");
+/* https://color.adobe.com/es/create/color-wheel */
+* {
+  font-family: "Source Sans Pro", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.topbar {
+  width: 100%;
+  height: 50px;
+  background-color: #105FAD;
+  position: sticky;
+  top: 0;
+}
+.topbar .wrapper {
+  height: 100%;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.topbar .wrapper .wrapper_left .logo {
+  font-weight: bold;
+  font-size: 1.7rem;
+  color: #FAAE2F;
+  cursor: pointer;
+}
+.topbar .wrapper .wrapper_right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.topbar .wrapper .wrapper_right .icons-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+  margin-right: 10px;
+  color: #ffffff;
+}
+.topbar .wrapper .wrapper_right .icons-container .topicon_bag {
+  width: 15px;
+  height: 15px;
+  position: absolute;
+  top: -2px;
+  right: 0px;
+  background-color: red;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+.topbar .wrapper .wrapper_right .avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=styles.css.map */
