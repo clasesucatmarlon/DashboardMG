@@ -60,4 +60,13 @@
   cursor: pointer;
 }
 
+.sidebar {
+  background-color: #4AA4FF;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=styles.css.map */
