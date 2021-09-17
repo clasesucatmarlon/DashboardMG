@@ -61,12 +61,39 @@
 }
 
 .sidebar {
-  background-color: #4AA4FF;
+  background-color: #FAAE2F;
+  padding: 10px;
+  width: 25%;
   height: 90vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+}
+.sidebar h2 {
   text-transform: uppercase;
+  text-align: center;
+  margin: 15px;
+}
+.sidebar ul {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar ul li {
+  list-style: none;
+  padding: 7px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+.sidebar ul li:hover {
+  background-color: #AD6D00;
+  color: #ffffff;
+  border-radius: 7px;
+}
+.sidebar ul li span {
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  color: #105FAD;
 }
 
 /*# sourceMappingURL=styles.css.map */

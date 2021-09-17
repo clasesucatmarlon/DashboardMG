@@ -1,8 +1,37 @@
 .sidebar {
-  background-color: $secondary;
+  background-color: $warning;
+  padding: 10px;
+  width:25%;
   height: 90vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  text-transform: uppercase;
+  flex-direction: column;
+  h2 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 15px;
+  }
+  ul {
+    display: flex;
+    flex-direction: column;
+    li {
+      list-style: none;
+      padding: 7px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: $hoverSidebar;
+        color: $white;
+        border-radius: 7px;
+      }
+      span {
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        color: $primary;
+      }
+    }
+    
+    
+  }
 }
