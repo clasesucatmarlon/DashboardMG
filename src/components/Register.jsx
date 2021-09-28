@@ -1,18 +1,18 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 import { Formik } from "formik";
 import { firebaseRegistrarUsuario } from "../utils/FirebaseUtil";
+import { Link as RouterLink } from "react-router-dom";
+import {
+  Link,
+  Typography,
+} from "@material-ui/core";
+
 
 export default function Register() {
-  //const navigate = useNavigate()
 
   const registrarUsuario = (usuario) => {
-    // console.log(usuario)
     firebaseRegistrarUsuario(usuario.email, usuario.password);
-    //alert("El usuario se registró con éxito.")
-    //navigate('/sidebar', {replace: true})
-
     //e.preventDefault();
     setInterval(() => {
       window.location.href = "/login";
@@ -72,8 +72,8 @@ export default function Register() {
           handleBlur,
         }) => (
           <div className="register_container">
-            <h1>Dashboard</h1>
             <form action="" className="register" onSubmit={handleSubmit}>
+              <h3>Sign up</h3>
               <div className="register__inputs">
                 <label htmlFor="nombre">Name: </label>
                 <input
@@ -100,10 +100,10 @@ export default function Register() {
                   value={values.email}
                   onChange={handleChange}
                   onBlur={handleBlur}
-                />
+                  />
                 {touched.email && errors.email && (
                   <div className="error">{errors.email}</div>
-                )}
+                  )}
               </div>
 
               <div className="register__inputs">
@@ -112,6 +112,7 @@ export default function Register() {
                   type="password"
                   id="password"
                   name="password"
+                  placeholder="*******"
                   value={values.password}
                   onChange={handleChange}
                   onBlur={handleBlur}
@@ -124,6 +125,18 @@ export default function Register() {
               <div className="register__inputs">
                 <button type="submit">Enviar</button>
               </div>
+
+              <Typography color="textSecondary" variant="body1" className="link_signUp">
+                Do have an account?{" "}
+                <Link
+                  component={RouterLink}
+                  to="/login"
+                  underline="hover"
+                >
+                  Sign in
+                </Link>
+              </Typography>
+
             </form>
           </div>
         )}

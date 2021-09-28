@@ -132,13 +132,21 @@
   justify-content: center;
   align-items: center;
   width: 30%;
-  height: 300px;
   margin: 0 auto;
   background: #fff;
   border-radius: 5px;
   padding: 50px;
   border: 1px solid #c9c4c4;
   box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 4px;
+}
+@media screen and (max-width: 360px) {
+  .register {
+    width: 50%;
+  }
+}
+.register h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
 }
 .register .register__inputs {
   width: 100%;
@@ -169,7 +177,7 @@
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-top: 20px;
+  margin: 20px 0;
   padding: 0.75rem;
   border-radius: 5px;
   color: #fff;
@@ -180,6 +188,15 @@
   color: #e92b2d;
   font-weight: 600;
   font-size: 0.75rem;
+}
+
+.link_signUp {
+  font-size: 1rem;
+}
+@media screen and (max-width: 360px) {
+  .link_signUp {
+    font-size: 0.8rem;
+  }
 }
 
 .login_container {
@@ -200,17 +217,45 @@
   justify-content: center;
   align-items: center;
   width: 30%;
-  height: 300px;
   margin: 0 auto;
   background: #fff;
   border-radius: 5px;
-  padding: 50px;
+  padding: 30px;
   border: 1px solid #c9c4c4;
   box-shadow: rgba(0, 0, 0, 0.16) 5px 5px 4px;
 }
-
-.button_login {
+@media screen and (max-width: 360px) {
+  .login {
+    width: 60%;
+  }
+}
+.login h3 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+.login .credencialesIncorrectas {
+  margin: 1rem 0;
+  padding: 10px;
+  background-color: #FAAE2F;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+.login .button_login {
   width: 100%;
+  margin-bottom: 1rem;
+}
+.login .button_login .button_login-color {
+  background-color: #105FAD;
+}
+.login .link_signIn {
+  font-size: 1rem;
+}
+@media screen and (max-width: 360px) {
+  .login .link_signIn {
+    font-size: 0.8rem;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,7 +1,8 @@
-import { Link as RouterLink, useNavigate } from "react-router-dom";
+import React, {  useState } from 'react';
+
+import { Link as RouterLink } from "react-router-dom";
 import { Formik } from "formik";
 import {
-  Box,
   Button,
   Link,
   TextField,
@@ -11,15 +12,18 @@ import { firebaseIniciarSesion } from "../../utils/FirebaseUtil";
 
 const Login = () => {
 
+  const [incorrecta, setIncorrecta] = useState(false)
+
   const iniciarSesion = async (credenciales) => {
     let sesionIniciada = await firebaseIniciarSesion(credenciales.email, credenciales.password)
     if (sesionIniciada) {
       window.location.href = "/sidebar";
     }
     else {
-      const incorrectas = `<p>Credenciales incorrectas</p>`
-      alert('Credenciales incorrectas')
-      window.location.href = "/";
+      setIncorrecta(true)
+      setInterval(() => {
+        window.location.href = "/";
+      }, 2000);
     }
   };
 
@@ -27,13 +31,11 @@ const Login = () => {
     <>
       <Formik
         initialValues={{
-          email: "demo@devias.io",
-          password: "Test123",
+          email: "",
+          password: "",
         }}
         onSubmit={(credenciales) => {
           iniciarSesion(credenciales);
-
-          // navigate('/app/dashboard', { replace: true });
         }}
       >
         {({
@@ -47,20 +49,15 @@ const Login = () => {
         }) => (
           <div className="login_container">
             <form className="login" onSubmit={handleSubmit}>
-              <Box sx={{ mb: 3 }}>
-                <Typography color="textPrimary" variant="h3">
-                  Sign in
-                </Typography>
-                <Typography color="textSecondary" gutterBottom variant="body2">
-                  Sign in on the internal platform
-                </Typography>
-              </Box>
+              <div>
+                <h3>Sign in</h3>
+              </div>
 
               <TextField
                 error={Boolean(touched.email && errors.email)}
                 fullWidth
                 helperText={touched.email && errors.email}
-                label="Email Address"
+                label="email"
                 margin="normal"
                 name="email"
                 onBlur={handleBlur}
@@ -85,18 +82,7 @@ const Login = () => {
 
               <div className="button_login">
                 <Button
-                    color="primary"
-                    disabled={isSubmitting}
-                    fullWidth
-                    size="large"
-                    type="submit"
-                    variant="contained"
-                  >
-                    Sign in now
-                  </Button>
-              </div>
-              {/* <Box sx={{ py: 2 }}>
-                <Button
+                  className="button_login-color"
                   color="primary"
                   disabled={isSubmitting}
                   fullWidth
@@ -106,14 +92,20 @@ const Login = () => {
                 >
                   Sign in now
                 </Button>
-              </Box> */}
 
-              <Typography color="textSecondary" variant="body1">
+                {
+                  incorrecta && 
+                  <div className="credencialesIncorrectas">
+                    <p>Incorrect credentials, try again</p>
+                  </div> 
+                }
+              </div>
+
+              <Typography color="textSecondary" variant="body1" className="link_signIn">
                 Don&apos;t have an account?{" "}
                 <Link
                   component={RouterLink}
                   to="/register"
-                  variant="h6"
                   underline="hover"
                 >
                   Sign up
@@ -123,8 +115,7 @@ const Login = () => {
           </div>
         )}
       </Formik>
-      {/* </Container> */}
-      {/* </Box> */}
+
     </>
   );
 };
