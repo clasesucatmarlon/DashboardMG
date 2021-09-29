@@ -1,13 +1,14 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword  } from "firebase/auth";
-//import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
+import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
+import {
+  getAuth,
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
-
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// Web app's Firebase configuration
 export function firebaseConfig() {
   const config = {
     apiKey: "AIzaSyDxQTj2CDXBE6rYa4GxQ13RrNbYcTRAZ4Y",
@@ -16,27 +17,41 @@ export function firebaseConfig() {
     storageBucket: "dashboardmg.appspot.com",
     messagingSenderId: "28997425909",
     appId: "1:28997425909:web:92058328cb95ef481083bc",
-    measurementId: "G-MYC7B15XJ6"
+    measurementId: "G-MYC7B15XJ6",
   };
-  
-  // Initialize Firebase
   const app = initializeApp(config);
-  //const analytics = getAnalytics(app);
 }
 
 export function firebaseRegistrarUsuario(email, password) {
-  createUserWithEmailAndPassword(getAuth(), email, password)
-  .then(credenciales => {
-    //credenciales.user
-  })
+  createUserWithEmailAndPassword(getAuth(), email, password).then(
+    (credenciales) => {
+      //credenciales.user
+    }
+  );
 }
 
-export  async function firebaseIniciarSesion(email, password) {
+export async function firebaseIniciarSesion(email, password) {
   try {
-    let credenciales = await signInWithEmailAndPassword(getAuth(), email, password)
+    let credenciales = await signInWithEmailAndPassword(
+      getAuth(),
+      email,
+      password
+    );
     //credenciales.user
   } catch (e) {
     return false;
   }
-  return true
+  return true;
+}
+
+export async function firebaseFindClients(coleccionBuscar) {
+  let listado = [];
+  let consulta = collection(getFirestore(), coleccionBuscar);
+  let resultado = await getDocs(consulta);
+  resultado.forEach(documento => {
+    let objeto = documento.data()
+    objeto.id = documento.id
+    listado.push(objeto)
+  })
+  return listado;
 }

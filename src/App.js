@@ -5,6 +5,7 @@ import Topbar from "./components/topBar/Topbar";
 import { firebaseConfig } from "./utils/FirebaseUtil";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/login/Login";
+import CustomerList from "./components/clients/CustomerList";
 //import Home from './pages/home/Home';
 
 firebaseConfig();
@@ -23,7 +24,10 @@ function App() {
           </Route>
           <Route exact path="/sidebar">
             <Topbar />
-            <Sidebar />
+            <div className="container">
+              <Sidebar />
+              <CustomerList />
+            </div>
           </Route>
           <Route exact path="/login">
             <Login />

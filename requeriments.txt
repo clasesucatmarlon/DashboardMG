@@ -10,8 +10,10 @@ Compilar SASS: sass --watch src/assets/sass:src/assets/css
 ICONS: https://mui.com/components/material-icons/
 ================================================================
 FIREBASE: npm i firebase
+USE: https://firebase.google.com/docs/web/setup?hl=es-419
 ================================================================
 REACT ROUTER: npm install react-router-dom
 ================================================================
 FORMIK: https://www.npmjs.com/package/formik
 ================================================================
+
