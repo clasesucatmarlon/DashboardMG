@@ -16,4 +16,11 @@ REACT ROUTER: npm install react-router-dom
 ================================================================
 FORMIK: https://www.npmjs.com/package/formik
 ================================================================
-
+React Feather Icons: https://www.npmjs.com/package/react-feather
+================================================================
+prop-types: https://www.npmjs.com/package/prop-types
+================================================================
+moment: https://www.npmjs.com/package/moment
+================================================================
+react-perfect-scrollbar: https://www.npmjs.com/package/react-perfect-scrollbar 
+================================================================

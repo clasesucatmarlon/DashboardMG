@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import { getAnalytics } from "firebase/analytics";
 import { initializeApp } from "firebase/app";
 import { getFirestore, collection, getDocs } from 'firebase/firestore/lite';
 import {
@@ -20,6 +21,7 @@ export function firebaseConfig() {
     measurementId: "G-MYC7B15XJ6",
   };
   const app = initializeApp(config);
+  const analytics = getAnalytics(app)
 }
 
 export function firebaseRegistrarUsuario(email, password) {
