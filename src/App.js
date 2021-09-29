@@ -1,5 +1,5 @@
 import "../src/assets/css/styles.css";
-import Register from "./components/Register";
+import Register from "./components/register/Register";
 import { Sidebar } from "./components/sidebar/Sidebar";
 import Topbar from "./components/topBar/Topbar";
 import { firebaseConfig } from "./utils/FirebaseUtil";

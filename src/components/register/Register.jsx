@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Formik } from "formik";
-import { firebaseRegistrarUsuario } from "../utils/FirebaseUtil";
+import { firebaseRegistrarUsuario } from "../../utils/FirebaseUtil";
 import { Link as RouterLink } from "react-router-dom";
 import {
   Link,
