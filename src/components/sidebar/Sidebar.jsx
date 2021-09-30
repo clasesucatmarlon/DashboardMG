@@ -22,8 +22,10 @@ export const Sidebar = () => {
         <div className="sidebarMenu">
           <h3 className="sidebarTitle">Dashboard</h3>
           <ul className="sidebarList">
-            <li className="sidebarListItem active">
-              <Home className="sidebarIcon"/>Home
+            <li className="sidebarListItem">
+              <a href="\home">
+                <Home className="sidebarIcon"/>Home
+              </a>
             </li>
             <li className="sidebarListItem">
               <Timeline className="sidebarIcon"/>Analytics
@@ -38,7 +40,9 @@ export const Sidebar = () => {
           <h3 className="sidebarTitle">Quick menu</h3>
           <ul className="sidebarList">
             <li className="sidebarListItem">
-              <PersonOutline className="sidebarIcon"/>Clients
+              <a href="/sidebar">
+                <PersonOutline className="sidebarIcon"/>Customers
+              </a>
             </li>
             <li className="sidebarListItem">
               <Storefront className="sidebarIcon"/>Products

@@ -6,7 +6,8 @@ import { firebaseConfig } from "./utils/FirebaseUtil";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Login from "./components/login/Login";
 import CustomerList from "./components/clients/CustomerList";
-//import Home from './pages/home/Home';
+import EditCustomers from "./components/clients/EditCustomers";
+import Home from "./pages/home/Home";
 
 firebaseConfig();
 
@@ -30,6 +31,20 @@ function App() {
           </Route>
           <Route exact path="/login">
             <Login />
+          </Route>
+          <Route exact path="/edit">
+            <Topbar />
+            <div className="container">
+              <Sidebar />
+              <EditCustomers />
+            </div>
+          </Route>
+          <Route exact path="/home">
+            <Topbar />
+            <div className="container">
+              <Sidebar />
+              <Home />
+            </div>
           </Route>
         </Switch>
       </Router>

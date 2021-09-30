@@ -3,6 +3,7 @@ import { Box, Container } from "@material-ui/core";
 import { firebaseFindClients } from "../../utils/FirebaseUtil";
 
 import CustomerListResults from "./CustomerListResults";
+import CustomerListToolbar from "./CustomerListToolbar";
 
 const CustomerList = () => {
   const [customers, setCustomers] = useState([]);
@@ -17,7 +18,7 @@ const CustomerList = () => {
   };
 
   return (
-    <>
+    <div className="customers">
       <Box
         sx={{
           backgroundColor: "background.default",
@@ -26,7 +27,7 @@ const CustomerList = () => {
         }}
         >
         <Container maxWidth={false}>
-          {/* <CustomerListToolbar /> */}
+          <CustomerListToolbar />
           
           <h1>CUSTOMERS</h1>
           <Box sx={{ pt: 3 }}>
@@ -34,7 +35,7 @@ const CustomerList = () => {
           </Box>
         </Container>
       </Box>
-    </>
+    </div>
   );
 };
 
