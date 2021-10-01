@@ -123,6 +123,10 @@
 .home {
   width: 100%;
 }
+.home .homeWidgets {
+  display: flex;
+  margin: 1.5rem;
+}
 
 .register_container {
   height: 100vh;
@@ -321,6 +325,85 @@
   font-size: 1rem;
   color: #c9c4c4;
   font-weight: 600;
+}
+
+.chart {
+  margin: 1.5rem;
+  padding: 1.75rem;
+  border: 1px solid #c9c4c4;
+  -webkit-box-shadow: 5px 5px 6px 0px #8f8b8f;
+  -moz-box-shadow: 5px 5px 6px 0px #8f8b8f;
+  box-shadow: 5px 5px 6px 0px #8f8b8f;
+}
+.chart .chartTitle {
+  margin-bottom: 1.5rem;
+}
+
+.widgetSmall {
+  width: 25%;
+  padding: 1.75rem;
+  margin-right: 1.75rem;
+  border: 1px solid #c9c4c4;
+  -webkit-box-shadow: 5px 5px 6px 0px #8f8b8f;
+  -moz-box-shadow: 5px 5px 6px 0px #8f8b8f;
+  box-shadow: 5px 5px 6px 0px #8f8b8f;
+}
+.widgetSmall .widgetSamllTitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.widgetSmall .widgetSmallList {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.widgetSmall .widgetSmallList .widgetSmallListItem {
+  display: flex;
+  align-items: center;
+  margin: 1.75rem 0;
+  justify-content: space-between;
+}
+.widgetSmall .widgetSmallList .widgetSmallListItem .widgetSmallImg {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 5%;
+}
+.widgetSmall .widgetSmallList .widgetSmallListItem .widgetSmallUser {
+  display: flex;
+  flex-direction: column;
+  margin-right: 10%;
+  text-align: left;
+  width: 50%;
+}
+.widgetSmall .widgetSmallList .widgetSmallListItem .widgetSmallUser .widgetSmallUserName {
+  font-weight: 600;
+}
+.widgetSmall .widgetSmallList .widgetSmallListItem .widgetSmallUser .widgetSmallUserTitle {
+  font-weight: 300;
+}
+.widgetSmall .widgetSmallList .widgetSmallListItem .widgetSmallButton {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.75rem;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+}
+.widgetSmall .widgetSmallList .widgetSmallListItem .widgetSmallButton .widgetIcon {
+  margin-right: 0.5rem;
+}
+
+.widgetLarge {
+  width: 75%;
+  padding: 1.75rem;
+  border: 1px solid #c9c4c4;
+  -webkit-box-shadow: 5px 5px 6px 0px #8f8b8f;
+  -moz-box-shadow: 5px 5px 6px 0px #8f8b8f;
+  box-shadow: 5px 5px 6px 0px #8f8b8f;
 }
 
 /*# sourceMappingURL=styles.css.map */

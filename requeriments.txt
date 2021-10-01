@@ -24,3 +24,5 @@ moment: https://www.npmjs.com/package/moment
 ================================================================
 react-perfect-scrollbar: https://www.npmjs.com/package/react-perfect-scrollbar 
 ================================================================
+Recharts: https://recharts.org/en-US/
+================================================================

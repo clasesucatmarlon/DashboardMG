@@ -17,7 +17,7 @@ const Login = () => {
   const iniciarSesion = async (credenciales) => {
     let sesionIniciada = await firebaseIniciarSesion(credenciales.email, credenciales.password)
     if (sesionIniciada) {
-      window.location.href = "/sidebar";
+      window.location.href = "/home";
     }
     else {
       setIncorrecta(true)
