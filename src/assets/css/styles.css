@@ -405,5 +405,49 @@
   -moz-box-shadow: 5px 5px 6px 0px #8f8b8f;
   box-shadow: 5px 5px 6px 0px #8f8b8f;
 }
+.widgetLarge .widgetLargeTitle {
+  font-size: 2rem;
+  font-weight: 600;
+}
+.widgetLarge .widgetLargeTable {
+  width: 100%;
+  border-spacing: 20px;
+}
+.widgetLarge .widgetLargeTable .widgetLargetTr .widgetLargeTh {
+  text-align: left;
+}
+.widgetLarge .widgetLargeTable .widgetLargetTr .widgetLargeUser {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+}
+.widgetLarge .widgetLargeTable .widgetLargetTr .widgetLargeUser .widgetLargeImg {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+.widgetLarge .widgetLargeTable .widgetLargetTr .widgetLargeDate, .widgetLarge .widgetLargeTable .widgetLargetTr .widgetLargeAmount {
+  font-weight: 300;
+}
+
+.widgetLargeButton {
+  padding: 7px 10px;
+  border: none;
+  border-radius: 10px;
+}
+.widgetLargeButton.Aproved {
+  background-color: #e5faf2;
+  color: green;
+}
+.widgetLargeButton.Declined {
+  background-color: #fff0f1;
+  color: red;
+}
+.widgetLargeButton.Pending {
+  background-color: #ebf1fe;
+  color: blue;
+}
 
 /*# sourceMappingURL=styles.css.map */

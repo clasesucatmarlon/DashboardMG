@@ -4,7 +4,8 @@ import {
   Home, 
   Timeline, 
   TrendingUp, 
-  PersonOutline, 
+  PersonOutline,
+  Group,
   Storefront,
   AttachMoney,
   BarChart,
@@ -42,6 +43,11 @@ export const Sidebar = () => {
             <li className="sidebarListItem">
               <a href="/sidebar">
                 <PersonOutline className="sidebarIcon"/>Customers
+              </a>
+            </li>
+            <li className="sidebarListItem">
+              <a href="/sidebar">
+                <Group className="sidebarIcon"/>Clients
               </a>
             </li>
             <li className="sidebarListItem">
