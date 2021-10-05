@@ -450,4 +450,39 @@
   color: blue;
 }
 
+.userList {
+  padding: 1.75rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.userListUser {
+  display: flex;
+  align-items: center;
+}
+.userListUser .userListImg {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.userListEdit {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: #ffffff;
+  cursor: pointer;
+  margin-right: 1.75rem;
+}
+
+.userListDelete {
+  color: red;
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=styles.css.map */

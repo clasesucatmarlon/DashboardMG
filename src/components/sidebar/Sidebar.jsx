@@ -46,7 +46,7 @@ export const Sidebar = () => {
               </a>
             </li>
             <li className="sidebarListItem">
-              <a href="/sidebar">
+              <a href="/userlist">
                 <Group className="sidebarIcon"/>Clients
               </a>
             </li>
